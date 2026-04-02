@@ -1,0 +1,355 @@
+/* =========================================
+   AURA V5 DESIGN SYSTEM - CORE STYLES
+   Rachel Amancio | Professional Consulting
+   ========================================= */
+
+/* 1. TOKENS & VARIABLES */
+:root {
+    --bg-body: #ffffff;
+    --bg-surface: #fafafa;
+    --bg-surface-2: #f4f4f5;
+
+    --text-primary: #09090b;
+    --text-secondary: #71717a;
+    --text-tertiary: #a1a1aa;
+
+    --border-light: #e4e4e7;
+    --border-hover: #d4d4d8;
+
+    --brand-primary: #000000;
+    --brand-inverse: #ffffff;
+
+    /* Motion */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in-out-circ: cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+}
+
+/* 2. ANIMATIONS & KEYFRAMES */
+
+/* Smooth Reveal Entrance */
+@keyframes slideUpFade {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+.motion-enter {
+    opacity: 0;
+    animation-play-state: paused;
+}
+
+.motion-enter.active {
+    animation: slideUpFade 1.2s var(--ease-out-expo) forwards;
+    animation-play-state: running;
+}
+
+/* Masked Text Reveal (Exclusividade do Hero) */
+.hero-text-mask {
+    overflow: hidden;
+    display: inline-flex;
+    line-height: 1.1;
+}
+
+.hero-text-mask span {
+    transform: translateY(110%) rotate(2deg);
+    opacity: 0;
+    transition: all 1.4s var(--ease-out-expo);
+    display: inline-block;
+    transform-origin: top left;
+}
+
+.hero-text-mask.active span {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+}
+
+/* Stagger Delays */
+.delay-100 { animation-delay: 0.1s; transition-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; transition-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; transition-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; transition-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; transition-delay: 0.5s; }
+
+/* Beam Spin for premium CTA */
+@keyframes beam-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Floating elements (Parallax feel) */
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(30px, -50px) scale(1.05) rotate(2deg); }
+    66% { transform: translate(-20px, 20px) scale(0.95) rotate(-2deg); }
+}
+
+.animate-float {
+    animation: float 20s infinite ease-in-out;
+}
+
+@keyframes float-simple {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.animate-float-simple {
+    animation: float-simple 6s ease-in-out infinite;
+}
+
+/* Marquee Carousel */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* 3. CORE UTILITIES & COMPONENTS */
+
+.font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Efeito de Texto Transparente com Outline */
+.text-stroke-transparent {
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.15);
+    transition: all 0.6s var(--ease-out-expo);
+    position: relative;
+}
+
+.text-stroke-transparent::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    color: var(--brand-primary);
+    overflow: hidden;
+    transition: width 0.8s var(--ease-out-expo);
+    -webkit-text-stroke: 0;
+}
+
+.group:hover .text-stroke-transparent::before {
+    width: 100%;
+}
+
+.hover-stroke-fill:hover .text-stroke-transparent {
+    -webkit-text-stroke: 1px var(--brand-primary);
+    color: transparent;
+}
+
+/* Efeito Vidro (Glassmorphism) */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Grid Background (Subtle Layout Lines) */
+.grid-guide {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    border-left: 1px dashed var(--border-light);
+    border-right: 1px dashed var(--border-light);
+}
+
+.grid-line {
+    width: 1px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, var(--border-light) 50%, transparent 50%);
+    background-size: 1px 12px;
+}
+
+/* --- Buttons --- */
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+    transition: all 0.3s var(--ease-out-expo);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-outline:hover {
+    border-color: var(--text-primary);
+    background: var(--bg-surface);
+    transform: translateY(-2px);
+}
+
+/* Beam Button (Botão Premium com brilho dinâmico) */
+.btn-beam-wrapper {
+    position: relative;
+    display: inline-flex;
+    padding: 2px;
+    border-radius: 9999px;
+    overflow: hidden;
+    cursor: pointer;
+    transform: translateZ(0);
+    transition: transform 0.3s var(--ease-out-expo), box-shadow 0.3s ease;
+}
+
+.btn-beam-wrapper:hover {
+    transform: scale(1.02) translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-beam-border {
+    position: absolute;
+    inset: -200%;
+    background: conic-gradient(from 0deg, transparent 0 320deg, var(--text-primary) 360deg);
+    animation: beam-spin 4s linear infinite;
+}
+
+.btn-beam-inner {
+    position: relative;
+    background: var(--bg-body);
+    color: var(--text-primary);
+    border-radius: 9999px;
+    padding: 0.75rem 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.btn-beam-wrapper:hover .btn-beam-inner {
+    background: #fafafa;
+}
+
+/* --- Glow Cards (Efeito Lanterna Especial) --- */
+.glow-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s var(--ease-out-expo);
+}
+
+.glow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0px;
+    background: radial-gradient(800px circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(139, 125, 154, 0.08), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.glow-card:hover::before {
+    opacity: 1;
+}
+
+.glow-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+}
+
+/* Image Mask for Parallax */
+.image-mask {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    transition: clip-path 1.5s var(--ease-out-expo);
+}
+
+/* Input Styling (Form) */
+.input-group {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+}
+
+.input-animated {
+    width: 100%;
+    padding: 1.25rem;
+    background: var(--bg-surface-2);
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 0.875rem;
+}
+
+.input-animated:focus {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    border-color: var(--text-tertiary);
+}
+
+.input-border-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: var(--brand-primary);
+    transition: width 0.4s var(--ease-out-expo);
+}
+
+.input-animated:focus~.input-border-bottom {
+    width: 100%;
+}
+
+/* Special Case for Soluções and Metodologia */
+.step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    background: #000;
+    color: #fff;
+}

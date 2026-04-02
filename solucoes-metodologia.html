@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Soluções e Metodologia | Rachel Amancio</title>
+    <meta name="description"
+        content="Conheça a metodologia estruturada da Rachel Amancio para transformar comportamento, cultura e performance de líderes e empresas." />
+
+    <!-- Fontes Principais (Design System) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones e Assets -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config p/ Design System Estrito -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#8B7D9A',
+                            teal: '#5C9E9A',
+                            primary: '#09090b',
+                            surface: '#fafafa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Overlay Grid -->
+    <div class="grid-guide hidden md:flex">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full z-50 glass">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="Logo.png" alt="Logo"
+                    class="w-10 h-10 object-contain grayscale group-hover:grayscale-0 transition-all">
+                <span class="font-serif text-xl tracking-tight text-black font-semibold">Rachel Amancio</span>
+            </a>
+
+            <nav class="hidden lg:flex gap-10">
+                <a href="index.html"
+                    class="text-xs font-mono font-medium uppercase tracking-widest text-neutral-500 hover:text-black transition-colors relative group">
+                    Início
+                    <span
+                        class="absolute -bottom-2 left-0 w-0 h-px bg-black transition-all group-hover:w-full ease-out duration-300"></span>
+                </a>
+                <a href="quem-sou.html"
+                    class="text-xs font-mono font-medium uppercase tracking-widest text-neutral-500 hover:text-black transition-colors relative group">
+                    Quem Sou
+                    <span
+                        class="absolute -bottom-2 left-0 w-0 h-px bg-black transition-all group-hover:w-full ease-out duration-300"></span>
+                </a>
+                <a href="solucoes-metodologia.html"
+                    class="text-xs font-mono font-medium uppercase tracking-widest text-black font-bold transition-colors relative group">
+                    Minha Abordagem
+                    <span
+                        class="absolute -bottom-2 left-0 w-full h-px bg-black transition-all ease-out duration-300"></span>
+                </a>
+            </nav>
+
+            <button class="btn-beam-wrapper scale-90 md:scale-100 hidden sm:inline-flex">
+                <span class="btn-beam-border"></span>
+                <span class="btn-beam-inner uppercase tracking-widest text-[10px]">
+                    Entre em contato
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main class="pt-32 relative z-10 w-full">
+
+        <!-- HERO SECTION -->
+        <section class="max-w-[1440px] mx-auto px-6 md:px-10 py-20 text-center">
+            <div class="motion-enter">
+                <h1
+                    class="text-5xl md:text-7xl lg:text-[5.5rem] font-black tracking-tighter leading-[1.1] mb-8 max-w-5xl mx-auto">
+                    Soluções que desenvolvem líderes e geram resultados reais
+                </h1>
+                <p class="text-xl md:text-2xl text-neutral-500 font-light max-w-3xl mx-auto mb-10">
+                    Uma abordagem estruturada para transformar comportamento, cultura e performance.
+                </p>
+            </div>
+
+            <!-- Destaque "Se você procura" -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 motion-enter delay-200">
+                <div
+                    class="bg-neutral-50 p-8 rounded-3xl text-left border border-neutral-100 hover:border-brand-purple/20 transition-all">
+                    <span class="text-4xl font-mono opacity-20 block mb-4">01</span>
+                    <h3 class="text-xl font-bold mb-2">Destravar seu potencial</h3>
+                    <p class="text-sm text-neutral-500">Ou o potencial do seu time.</p>
+                </div>
+                <div
+                    class="bg-neutral-50 p-8 rounded-3xl text-left border border-neutral-100 hover:border-brand-purple/20 transition-all">
+                    <span class="text-4xl font-mono opacity-20 block mb-4">02</span>
+                    <h3 class="text-xl font-bold mb-2">Alavancar resultados</h3>
+                    <p class="text-sm text-neutral-500">Próprios ou da sua empresa.</p>
+                </div>
+                <div
+                    class="bg-neutral-50 p-8 rounded-3xl text-left border border-neutral-100 hover:border-brand-purple/20 transition-all">
+                    <span class="text-4xl font-mono opacity-20 block mb-4">03</span>
+                    <h3 class="text-xl font-bold mb-2">Ações efetivas</h3>
+                    <p class="text-sm text-neutral-500">Desenvolvimento com plano de ação estratégico e acelerado.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEXTO INSTITUCIONAL -->
+        <section class="bg-zinc-50 py-24 border-y border-dashed border-black/5">
+            <div class="max-w-4xl mx-auto px-6 text-center motion-enter">
+                <h2 class="text-2xl md:text-[2rem] font-bold leading-snug mb-10 text-neutral-700">
+                    Já pensou sobre o porquê alguns profissionais e equipes alcançam saltos de desenvolvimento enquanto
+                    outros, igualmente capazes, repetem os mesmos desafios?
+                </h2>
+                <div class="space-y-6 text-lg text-neutral-500 font-normal leading-relaxed text-left md:text-center">
+                    <p>O ponto decisivo não é conhecimento, nem tempo de experiência. E sim a forma de transformar isso
+                        em habilidade, competência e comportamento.</p>
+                    <p>Com a prática do <span class="text-black font-semibold">autoconhecimento</span> e um <span
+                            class="text-black font-semibold">olhar holístico</span> para potencialidades, talentos,
+                        crenças e padrões transformamos de dentro para fora construindo o presente e futuro que
+                        almejamos, como profissionais ou empresa.</p>
+                    <p>Para empresas as ações pontuais como palestras, tembuildings, workshops ou mentorias em grupo
+                        atuam como <span class="text-black font-semibold">catalizadores dessa mudança</span>. Para um
+                        acompanhamento ainda mais profundo e robusto, a consultoria empresarial e a implementação de um
+                        programa de desenvolvimento podem ser a chave.</p>
+                    <p>Para profissionais, a mentoria entra como uma ferramenta poderosa: ela ajuda a enxergar o que
+                        está por trás dos comportamentos, fortalece competências e cria uma base de desenvolvimento mais
+                        consciente. Quando isso acontece, a evolução deixa de ser esporádica e passa a ser sustentável.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOLUÇÕES DETALHADAS -->
+        <section class="max-w-[1440px] mx-auto px-6 md:px-10 py-28">
+            <h2 class="text-5xl font-black tracking-tighter mb-20 text-center">Soluções</h2>
+
+            <div class="grid gap-20">
+                <!-- Solução 1: Mentoria -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center motion-enter">
+                    <div class="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
+                        <img src="Imagens/Captura de tela 2026-04-01 183517.png"
+                            alt="Rachel Amancio - Mentoria" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 text-brand-purple">Mentoria</h3>
+                        <div class="space-y-4 text-neutral-600 leading-relaxed">
+                            <p>Para a sua carreira, minha metodologia foca nas necessidades individuais abordando desde
+                                a clareza de objetivos profissionais, redesenho de posicionamento e criação de um plano
+                                prático para crescer ou se recolocar.</p>
+                            <p>Para a liderança, desenvolvo gestores na formação de equipes de alta performance, na
+                                condução de conversas difíceis e no fortalecimento da comunicação e do feedback.</p>
+                            <p>Em grupo, facilito conversas desafiadoras, reforço o pertencimento e estimulo
+                                transformações reais nos times.</p>
+                        </div>
+                        <button class="mt-8 btn-outline">Agendar conversa gratuita</button>
+                    </div>
+                </div>
+
+                <!-- Solução 2: Desenvolvimento de Pessoas e Times -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center motion-enter lg:flex-row-reverse">
+                    <div class="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl lg:order-2">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+                            alt="Times" class="w-full h-full object-cover">
+                    </div>
+                    <div class="lg:order-1">
+                        <h3 class="text-3xl font-bold mb-6 text-brand-teal">Desenvolvimento de Pessoas e Times</h3>
+                        <div class="space-y-4 text-neutral-600 leading-relaxed">
+                            <p>Meu trabalho tem o objetivo de fortalecer pessoas, times e lideranças por meio de
+                                experiências práticas e transformadoras. Com workshops, teambuildings, palestras ou
+                                programas completos de desenvolvimento, o foco é sempre criar espaços de aprendizagem
+                                que conectam, engajam e geram mudanças reais no dia a dia.</p>
+                            <p>As soluções são desenhadas sob medida para cada contexto, ajudando equipes a se
+                                comunicarem melhor, colaborarem com mais fluidez e agirem com autonomia,
+                                responsabilidade e confiança.</p>
+                        </div>
+                        <button class="mt-8 btn-outline">Agendar conversa gratuita</button>
+                    </div>
+                </div>
+
+                <!-- Solução 3: Suporte Especializado RH -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center motion-enter">
+                    <div class="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+                            alt="Consultoria RH" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-bold mb-6 text-neutral-700">Suporte Especializado em RH</h3>
+                        <div class="space-y-4 text-neutral-600 leading-relaxed">
+                            <p>Ofereço apoio estratégico para áreas de RH que buscam estruturar processos, diagnosticar
+                                necessidades e tomar decisões com mais clareza. A consultoria pode envolver desenho de
+                                práticas, revisão de jornadas, implementação de políticas e suporte em projetos
+                                específicos.</p>
+                            <p>As avaliações de perfil combinam assessment, devolutiva detalhada e construção de PDI,
+                                trazendo uma visão profunda sobre talentos, potencial e direcionamento de
+                                desenvolvimento. Atuo conectando pessoas, cultura e resultados.</p>
+                        </div>
+                        <button class="mt-8 btn-outline">Agendar conversa gratuita</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- METODOLOGIA TRANSFORMADORA -->
+        <section class="bg-brand-primary text-white py-28 relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+                <div
+                    class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_#8B7D9A,_transparent_70%)]">
+                </div>
+            </div>
+
+            <div class="max-w-[1440px] mx-auto px-6 md:px-10 relative z-10 text-center">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-16 max-w-4xl mx-auto leading-tight">
+                    Conheça a Metodologia que transforma Potencial em Performance
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                    <!-- Etapa 1 -->
+                    <div
+                        class="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-left">
+                        <div class="step-number mb-6 bg-brand-teal">01</div>
+                        <h4 class="font-bold text-lg mb-3">Diagnóstico Profundo</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">Análise do contexto, estratégia,
+                            necessidades e aspectos comportamentais.</p>
+                    </div>
+                    <!-- Etapa 2 -->
+                    <div
+                        class="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-left">
+                        <div class="step-number mb-6 bg-brand-purple">02</div>
+                        <h4 class="font-bold text-lg mb-3">Objetivo Direcionado</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">Definição clara de metas alinhadas aos
+                            valores e contexto.</p>
+                    </div>
+                    <!-- Etapa 3 -->
+                    <div
+                        class="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-left">
+                        <div class="step-number mb-6 bg-[#6FBED1]">03</div>
+                        <h4 class="font-bold text-lg mb-3">Plano de Ação</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">Estratégias práticas, executáveis e
+                            sustentáveis para o momento atual.</p>
+                    </div>
+                    <!-- Etapa 4 -->
+                    <div
+                        class="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-left">
+                        <div class="step-number mb-6 bg-[#635787]">04</div>
+                        <h4 class="font-bold text-lg mb-3">Estratégia em Movimento</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">Implementação ativa com execução e medição
+                            ao longo do processo.</p>
+                    </div>
+                    <!-- Etapa 5 -->
+                    <div
+                        class="p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-left">
+                        <div class="step-number mb-6 bg-[#5C9E9A]">05</div>
+                        <h4 class="font-bold text-lg mb-3">Acompanhamento</h4>
+                        <p class="text-xs text-neutral-400 leading-relaxed">Suporte contínuo e ajustes estratégicos que
+                            mantêm você no caminho certo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA A MENTORIA (6 FASES) -->
+        <section class="max-w-[1440px] mx-auto px-6 md:px-10 py-28">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black tracking-tight mb-4">Como funciona a Mentoria</h2>
+                <p class="text-neutral-500">Desenvolvimento acelerado com intencionalidade e resultado rápido</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Fase 1 -->
+                <div class="glow-card p-10">
+                    <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest mb-4">Fase 01</p>
+                    <h4 class="text-xl font-bold mb-3 italic">Aplicação e Devolutiva de Assessments</h4>
+                </div>
+                <!-- Fase 2 -->
+                <div class="glow-card p-10">
+                    <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest mb-4">Fase 02</p>
+                    <h4 class="text-xl font-bold mb-3 italic">Foco em Autoconhecimento e Posicionamento</h4>
+                </div>
+                <!-- Fase 3 -->
+                <div class="glow-card p-10">
+                    <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest mb-4">Fase 03</p>
+                    <h4 class="text-xl font-bold mb-3 italic">Direcionamento com Estratégia e Intenção</h4>
+                </div>
+                <!-- Fase 4 -->
+                <div class="glow-card p-10">
+                    <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest mb-4">Fase 04</p>
+                    <h4 class="text-xl font-bold mb-3 italic">Desenvolvimento de Habilidades e Competências</h4>
+                </div>
+                <!-- Fase 5 -->
+                <div class="glow-card p-10">
+                    <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest mb-4">Fase 05</p>
+                    <h4 class="text-xl font-bold mb-3 italic">Consolidação e Plano de Ação</h4>
+                </div>
+                <!-- Fase 6 -->
+                <div class="glow-card p-10">
+                    <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest mb-4">Fase 06</p>
+                    <h4 class="text-xl font-bold mb-3 italic">Acompanhamento Personalizado</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEMAS DE ESPECIALIDADE -->
+        <section class="bg-neutral-50 py-28 border-y border-dashed border-black/5 overflow-hidden">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+                <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-16 text-center">Temas de especialidade
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-12">
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Inteligência emocional aplicada a gestão de
+                            negócios e pessoas</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Competências do Profissional do Futuro</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Programa de Desenvolvimento da Liderança
+                            Feminina</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Equipes de alta performance: produtividade e
+                            gestão do tempo</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Saúde mental – NR01</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Trilha do Autoconhecimento e
+                            automotivação</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Diversidade, Equidade e inclusão no
+                            trabalho</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">ESG na prática</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Cultura organizacional e o papel da
+                            liderança</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Motivação e engajamento para promover
+                            e-NPS</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Comunicação, EVP e marca empregadora</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Relacionamento interpessoal e
+                            Networking</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Comunicação não violenta</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Trabalho em equipe, empatia e
+                            produtividade</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Campanha de saúde e prevenção de doenças –
+                            OMS</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">O poder do perfil comportamental na
+                            performance</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Felicidade Corporativa</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Treinamento para Mentores</span>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <iconify-icon icon="solar:check-circle-bold" class="text-brand-purple mt-1"></iconify-icon>
+                        <span class="text-neutral-700 font-medium italic">Programas Personalizados</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS / RESULTADOS -->
+        <section class="max-w-[1440px] mx-auto px-6 md:px-10 py-28 overflow-hidden">
+            <h2 class="text-4xl md:text-5xl font-black tracking-tighter mb-16 text-center italic">Resultados e Impacto
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="glow-card p-12 relative">
+                    <iconify-icon icon="bi:quote"
+                        class="text-5xl text-brand-purple/20 absolute top-8 right-8"></iconify-icon>
+                    <p class="text-neutral-600 leading-relaxed mb-8 italic">
+                        "A mentoria com a Rachel Amancio foi essencial para minha organização e evolução de carreira.
+                        Com sua experiência sólida em RH e visão estratégica, ela me ajudou a estruturar meu currículo,
+                        me preparar melhor para entrevistas e entender com clareza meus próximos passos. Uma
+                        profissional competente, objetiva e realmente dedicada em orientar. Valeu muito a pena."
+                    </p>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-black uppercase">Felipe</span>
+                        <span class="text-xs font-mono text-neutral-400">Engenharia</span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="glow-card p-12 relative">
+                    <iconify-icon icon="bi:quote"
+                        class="text-5xl text-brand-purple/20 absolute top-8 right-8"></iconify-icon>
+                    <p class="text-neutral-600 leading-relaxed mb-8 italic">
+                        "Minha imensa gratidão a mentoria com a Rachel. Eu confesso que inicialmente não imaginava que
+                        poderia fazer tanta diferença em tão pouco tempo! Em um pacote de 3 sessões, eu pude observar
+                        uma enorme diferença no meu posicionamento e no meu dia a dia na empresa. Saí outra pessoa muito
+                        melhor graças aos sábios direcionamentos da Rachel!"
+                    </p>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-black uppercase">Caroline</span>
+                        <span class="text-xs font-mono text-neutral-400">Investimento Bancário</span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="glow-card p-12 relative">
+                    <iconify-icon icon="bi:quote"
+                        class="text-5xl text-brand-purple/20 absolute top-8 right-8"></iconify-icon>
+                    <p class="text-neutral-600 leading-relaxed mb-8 italic">
+                        "Rachel, quero agradecer imensamente pela mentoria. Nossas sessões foram essenciais para
+                        destravar todas vontades relacionadas a minha carreira. Pude dar esse passo após assistir um
+                        podcast que participou. Ao finalizar nosso processo, tive certeza que fiz a melhor escolha. Você
+                        é nota 11 de 10!"
+                    </p>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-black uppercase">Anderson</span>
+                        <span class="text-xs font-mono text-neutral-400">Eventos Corporativos</span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 4 -->
+                <div class="glow-card p-12 relative">
+                    <iconify-icon icon="bi:quote"
+                        class="text-5xl text-brand-purple/20 absolute top-8 right-8"></iconify-icon>
+                    <p class="text-neutral-600 leading-relaxed mb-8 italic">
+                        "Muito obrigada por todo o apoio durante a mentoria, foi essencial para me fortalecer e
+                        acreditar que estava apta e merecia pessoas e lugares muito melhores do o que estive inserida
+                        até então. Espero que mais pessoas tenham a sorte de ser mentoradas por você, faz toda a
+                        diferença na vida!"
+                    </p>
+                    <div class="flex flex-col">
+                        <span class="font-bold text-black uppercase">Mariene</span>
+                        <span class="text-xs font-mono text-neutral-400">Marketing</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGO MARQUEE (Empresas) -->
+        <section class="py-12 md:py-20 border-y border-dashed border-black/5 bg-neutral-50 overflow-hidden">
+            <div class="max-w-[1440px] w-full mx-auto px-6 md:px-10 mb-8 md:mb-12 text-center">
+                <h2 class="text-xs md:text-sm font-mono tracking-[0.2em] uppercase text-neutral-500">
+                    Empresas que confiaram no meu trabalho para ir mais longe</h2>
+            </div>
+            <div
+                class="flex animate-marquee gap-10 md:gap-16 items-center opacity-70 hover:opacity-100 transition-opacity duration-500">
+                <!-- Group 1 -->
+                <img src="Imagens/Carrossel_Empresas/Cabot_Corporation_Logo_svg (1).avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/fundotemp_edited.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Hbergroup.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Logo_Bombril.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/LOGO_BRAIDO_AJUSTADO_edited_edited.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Logo-Zincagem-Marisa-RGB.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Moderna.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/nilpel_industria_e_comercio_de_papeis_ltda_logo.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+
+                <!-- Group 2 (Copy for seamless loop) -->
+                <img src="Imagens/Carrossel_Empresas/Cabot_Corporation_Logo_svg (1).avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/fundotemp_edited.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Hbergroup.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Logo_Bombril.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/LOGO_BRAIDO_AJUSTADO_edited_edited.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Logo-Zincagem-Marisa-RGB.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/Moderna.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+                <img src="Imagens/Carrossel_Empresas/nilpel_industria_e_comercio_de_papeis_ltda_logo.avif"
+                    class="h-8 md:h-12 w-auto object-contain grayscale mix-blend-multiply">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-24 pb-12 border-t border-dashed border-black/10 text-center">
+        <h2 class="text-4xl md:text-5xl font-black mb-10">Pronto para transformar sua liderança?</h2>
+        <div class="flex flex-col sm:flex-row gap-5 justify-center mb-16">
+            <div class="btn-beam-wrapper">
+                <span class="btn-beam-border"></span>
+                <span class="btn-beam-inner">Quero levar para minha empresa</span>
+            </div>
+            <button class="btn-outline px-8 py-3">Falar com especialista</button>
+        </div>
+        <div
+            class="pt-12 border-t border-dashed border-black/5 text-[10px] font-mono text-neutral-400 uppercase tracking-widest">
+            © 2026 Rachel Amancio. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Scripts: Microinterações -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Intersection Observer (Fade/Slide in on Scroll)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.motion-enter, .hero-text-mask').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Trigger imediato para elementos que já estão na viewport
+            setTimeout(() => {
+                document.querySelectorAll('.hero-text-mask').forEach(el => el.classList.add('active'));
+                document.querySelectorAll('.motion-enter').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        el.classList.add('active');
+                    }
+                });
+            }, 100);
+
+            // 2. Efeito Flashlight / Cursor Glow para os Cards
+            const glowCards = document.querySelectorAll('.glow-card');
+            glowCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+                    card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

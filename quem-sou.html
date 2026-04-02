@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Rachel Amancio | Quem Sou</title>
+    <meta name="description"
+        content="Conheça a trajetória de Rachel Amancio, executiva de RH e mentora de lideranças com mais de 20 anos de experiência." />
+
+    <!-- Fontes Principais (Design System) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Ícones e Assets -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config p/ Design System Estrito -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        brand: {
+                            purple: '#8B7D9A', // Cor premium extraída da paleta
+                            teal: '#5C9E9A',   // Cor secundária da identidade
+                            primary: '#09090b',
+                            surface: '#fafafa',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Overlay Grid do Design System 5 -->
+    <div class="grid-guide hidden md:flex">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+
+    <!-- Navegação Superior Glassmorphism -->
+    <header class="fixed top-0 left-0 w-full z-50 glass transition-all duration-300 motion-enter active">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 h-24 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="Logo.png" alt="Logo"
+                    class="w-10 h-10 object-contain grayscale group-hover:grayscale-0 hover:scale-105 transition-all cursor-pointer">
+                <span class="font-serif text-xl tracking-tight text-brand-primary font-semibold">Rachel Amancio</span>
+            </a>
+
+            <nav class="hidden lg:flex gap-10">
+                <a href="index.html"
+                    class="text-xs font-mono font-medium uppercase tracking-widest text-neutral-500 hover:text-black transition-colors relative group">
+                    Início
+                    <span
+                        class="absolute -bottom-2 left-0 w-0 h-px bg-black transition-all group-hover:w-full ease-out duration-300"></span>
+                </a>
+                <a href="#sobre"
+                    class="text-xs font-mono font-medium uppercase tracking-widest text-black font-bold transition-colors relative group">
+                    Quem Sou
+                    <span
+                        class="absolute -bottom-2 left-0 w-full h-px bg-black transition-all ease-out duration-300"></span>
+                </a>
+                <a href="solucoes-metodologia.html"
+                    class="text-xs font-mono font-medium uppercase tracking-widest text-neutral-500 hover:text-black transition-colors relative group">
+                    Minha Abordagem
+                    <span
+                        class="absolute -bottom-2 left-0 w-0 h-px bg-black transition-all group-hover:w-full ease-out duration-300"></span>
+                </a>
+            </nav>
+
+            <button class="btn-beam-wrapper scale-90 md:scale-100 hidden sm:inline-flex">
+                <span class="btn-beam-border"></span>
+                <span
+                    class="btn-beam-inner uppercase tracking-widest text-xs bg-brand-primary text-white hover:bg-neutral-900 border-none">
+                    Entre em contato
+                </span>
+            </button>
+
+            <button class="lg:hidden text-2xl text-black">
+                <iconify-icon icon="solar:hamburger-menu-linear"></iconify-icon>
+            </button>
+        </div>
+    </header>
+
+    <main class="relative z-10 w-full overflow-hidden">
+
+        <!-- =========================================
+             1. HERO SECTION (QUEM SOU)
+             ========================================= -->
+        <section id="hero-quem-sou"
+            class="relative min-h-[90svh] flex items-center pt-32 pb-20 overflow-hidden border-b border-dashed border-black/5 bg-white">
+
+            <!-- Background Elements -->
+            <div class="absolute inset-0 z-0 pointer-events-none">
+                <div
+                    class="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-brand-purple rounded-full blur-[120px] animate-float opacity-10">
+                </div>
+                <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-brand-teal rounded-full blur-[120px] animate-float opacity-10"
+                    style="animation-delay: -3s;"></div>
+            </div>
+
+            <div
+                class="max-w-[1440px] w-full mx-auto px-6 md:px-10 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Text Content -->
+                <div class="flex flex-col items-start order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-black/5 bg-white/60 backdrop-blur mb-8 motion-enter delay-100 shadow-sm">
+                        <div class="w-2 h-2 rounded-full bg-brand-teal animate-pulse"></div>
+                        <span
+                            class="text-[10px] sm:text-xs font-mono uppercase tracking-[0.2em] text-neutral-600">Trajetória
+                            e Autoridade</span>
+                    </div>
+
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-7xl font-black tracking-tighter leading-[1.1] text-black mb-8 motion-enter delay-200">
+                        Mais de 20 anos desenvolvendo <span class="text-stroke-transparent"
+                            data-text="Líderes">Líderes</span> e transformando resultados
+                    </h1>
+
+                    <h2 class="text-xl md:text-2xl text-black font-semibold mb-4 motion-enter delay-300">
+                        Mentora, consultora e palestrante especializada em liderança e cultura organizacional
+                    </h2>
+
+                    <p
+                        class="text-lg text-neutral-500 font-light max-w-xl mb-10 leading-relaxed motion-enter delay-400">
+                        Psicóloga, executiva de RH e uma das principais referências em desenvolvimento de lideranças no
+                        Brasil.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-5 motion-enter delay-500">
+                        <a href="#contato" class="btn-beam-wrapper">
+                            <span class="btn-beam-border"></span>
+                            <span
+                                class="btn-beam-inner px-8 py-4 text-sm uppercase tracking-widest bg-brand-primary text-white">
+                                Vamos conversar
+                                <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="relative order-1 lg:order-2 motion-enter delay-300">
+                    <div
+                        class="glow-card p-4 pb-0 pt-0 bg-white/50 relative z-10 w-full max-w-md mx-auto aspect-[4/5] flex flex-col shadow-2xl group image-mask">
+                        <div class="w-full relative h-[95%] mt-4 overflow-hidden rounded-2xl bg-neutral-200">
+                            <img src="Imagens/Captura de tela 2026-03-30 185723.png"
+                                class="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+                                alt="Rachel Amancio">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Badge -->
+                    <div
+                        class="absolute -bottom-6 -right-6 lg:-right-10 bg-white p-5 rounded-2xl shadow-xl border border-black/5 z-20 animate-float-simple flex items-center gap-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-brand-purple/10 flex items-center justify-center text-brand-purple text-2xl">
+                            <iconify-icon icon="solar:medal-star-bold-duotone"></iconify-icon>
+                        </div>
+                        <div>
+                            <p
+                                class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest leading-none mb-1">
+                                Top 3 HR</p>
+                            <p class="font-bold text-sm leading-none text-black">Influencer Brasil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             2. SOBRE SECTION (BIO)
+             ========================================= -->
+        <section id="biografia" class="py-24 md:py-32 relative bg-neutral-50 border-b border-dashed border-black/5">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+
+                    <div class="lg:col-span-4 lg:sticky lg:top-32 motion-enter delay-100">
+                        <h2 class="text-xs font-mono tracking-[0.3em] uppercase text-brand-teal mb-6">Minha História
+                        </h2>
+                        <h3 class="text-3xl md:text-5xl font-bold tracking-tighter text-black leading-tight">
+                            Uma jornada dedicada ao potencial humano.
+                        </h3>
+                    </div>
+
+                    <div
+                        class="lg:col-span-8 flex flex-col gap-8 text-neutral-600 text-lg md:text-xl font-light leading-relaxed motion-enter delay-300">
+                        <p>
+                            Sou executiva de Recursos Humanos, psicóloga, coach e mentora, com mais de 20 anos de
+                            experiência apoiando profissionais e empresas em diferentes setores.
+                        </p>
+                        <p>
+                            Ao longo da minha trajetória, tive a oportunidade de contribuir diretamente para o
+                            desenvolvimento de lideranças e a construção de culturas organizacionais mais fortes,
+                            humanas e orientadas a resultados.
+                        </p>
+                        <p
+                            class="p-8 text-center bg-white rounded-3xl border border-black/5 shadow-sm text-black font-normal italic relative">
+                            <iconify-icon icon="ri:double-quotes-l"
+                                class="absolute top-4 left-4 text-4xl text-neutral-100"></iconify-icon>
+                            Fui reconhecida como uma das principais influenciadoras de RH do Brasil, sendo eleita Top 3
+                            HR Influencer pela Gointegro.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             3. ESPECIALIZAÇÕES SECTION (CARDS)
+             ========================================= -->
+        <section id="especializacoes" class="py-24 md:py-32 relative bg-white border-b border-dashed border-black/5">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+                <div class="mb-20 text-center lg:text-left motion-enter delay-100">
+                    <h2 class="text-xs font-mono tracking-[0.3em] uppercase text-brand-purple mb-6">Expertise</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold tracking-tighter text-black">Formação e Especializações
+                    </h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                    <!-- Card 1 -->
+                    <div class="glow-card p-8 group motion-enter delay-100">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-neutral-50 flex items-center justify-center mb-6 group-hover:bg-brand-teal group-hover:text-white transition-all">
+                            <iconify-icon icon="solar:users-group-rounded-bold-duotone" class="text-2xl"></iconify-icon>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-black">Desenvolvimento de Lideranças</h4>
+                        <p class="text-neutral-500 text-sm leading-relaxed">Especialista sênior com foco em acelerar a
+                            performance de gestores e executivos.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glow-card p-8 group motion-enter delay-200">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-neutral-50 flex items-center justify-center mb-6 group-hover:bg-brand-purple group-hover:text-white transition-all">
+                            <iconify-icon icon="solar:star-fall-minimalistic-bold-duotone"
+                                class="text-2xl"></iconify-icon>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-black">Accountable Leader</h4>
+                        <p class="text-neutral-500 text-sm leading-relaxed">Certificação internacional focada em
+                            autorresponsabilidade e liderança prática.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glow-card p-8 group motion-enter delay-300">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-neutral-50 flex items-center justify-center mb-6 group-hover:bg-brand-teal group-hover:text-white transition-all">
+                            <iconify-icon icon="solar:flag-2-bold-duotone" class="text-2xl"></iconify-icon>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-black">Cultura Organizacional</h4>
+                        <p class="text-neutral-500 text-sm leading-relaxed">Certificação Culture Assessment pelo Barrett
+                            Values Centre, referência global.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glow-card p-8 group motion-enter delay-400">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-neutral-50 flex items-center justify-center mb-6 group-hover:bg-brand-purple group-hover:text-white transition-all">
+                            <iconify-icon icon="solar:chat-round-dots-bold-duotone" class="text-2xl"></iconify-icon>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-black">Coaching e Mentoring</h4>
+                        <p class="text-neutral-500 text-sm leading-relaxed">Certificação internacional para suporte
+                            individualizado de alta impacto.</p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="glow-card p-8 group motion-enter delay-500">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-neutral-50 flex items-center justify-center mb-6 group-hover:bg-brand-teal group-hover:text-white transition-all">
+                            <iconify-icon icon="solar:graph-up-bold-duotone" class="text-2xl"></iconify-icon>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-black">Ferramentas de Avaliação</h4>
+                        <p class="text-neutral-500 text-sm leading-relaxed">Domínio técnico de metodologias como Big
+                            Five e SHL para mapeamento de perfil.</p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="glow-card p-8 group motion-enter delay-600">
+                        <div
+                            class="w-12 h-12 rounded-xl bg-neutral-50 flex items-center justify-center mb-6 group-hover:bg-brand-purple group-hover:text-white transition-all">
+                            <iconify-icon icon="solar:heart-bold-duotone" class="text-2xl"></iconify-icon>
+                        </div>
+                        <h4 class="text-xl font-bold mb-4 text-black">CHO – Felicidade Corporativa</h4>
+                        <p class="text-neutral-500 text-sm leading-relaxed">Formação Chief Happiness Officer (Europa)
+                            focada em bem-estar e performance.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             4. DESTAQUES SECTION (CARROSSEL)
+             ========================================= -->
+        <section id="destaques" class="py-24 md:py-32 bg-zinc-50 overflow-hidden border-b border-dashed border-black/5">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-10 mb-16 text-center">
+                <h2 class="text-xs font-mono tracking-[0.3em] uppercase text-neutral-400 mb-6 motion-enter">Impacto e
+                    Reconhecimento</h2>
+                <h3 class="text-3xl md:text-5xl font-bold tracking-tighter text-black motion-enter delay-100">Presença
+                    no mercado e eventos</h3>
+            </div>
+
+            <!-- Marquee Carousel das fotos pessoais/eventos -->
+            <div
+                class="flex animate-marquee gap-6 md:gap-10 items-center hover:opacity-100 transition-opacity duration-500">
+                <!-- Imagens Originais e Cópias para Loop -->
+                <div class="flex gap-6 md:gap-10 shrink-0">
+                    <img src="Imagens/Carrossel_Pessoal/a5b971_1c9eb78ee3684ee390c1055ae25dc744~mv2.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Evento">
+                    <img src="Imagens/Carrossel_Pessoal/quercafe.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Entrevista">
+                    <img src="Imagens/Carrossel_Pessoal/certificado.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Certificação">
+                    <img src="Imagens/Carrossel_Pessoal/a5b971_e7b1063e71a5452b9fba96cb45ccebb4~mv2.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Palestra">
+                    <img src="Imagens/Carrossel_Pessoal/selo IVG_edited_edited.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Reconhecimento">
+                    <img src="Imagens/Carrossel_Pessoal/a5b971_71fbab238bf942d1af211e1ce9df5d7b~mv2.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Bastidores">
+                </div>
+                <!-- Duplicate for loop -->
+                <div class="flex gap-6 md:gap-10 shrink-0">
+                    <img src="Imagens/Carrossel_Pessoal/a5b971_1c9eb78ee3684ee390c1055ae25dc744~mv2.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Evento">
+                    <img src="Imagens/Carrossel_Pessoal/quercafe.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Entrevista">
+                    <img src="Imagens/Carrossel_Pessoal/certificado.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Certificação">
+                    <img src="Imagens/Carrossel_Pessoal/a5b971_e7b1063e71a5452b9fba96cb45ccebb4~mv2.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Palestra">
+                    <img src="Imagens/Carrossel_Pessoal/selo IVG_edited_edited.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Reconhecimento">
+                    <img src="Imagens/Carrossel_Pessoal/a5b971_71fbab238bf942d1af211e1ce9df5d7b~mv2.avif"
+                        class="h-64 md:h-80 w-auto rounded-3xl shadow-lg hover:scale-[1.03] transition-transform duration-500 object-cover"
+                        alt="Bastidores">
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             5. MISSÃO SECTION
+             ========================================= -->
+        <section id="missao" class="py-24 md:py-32 bg-white relative overflow-hidden">
+            <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+                <div
+                    class="bg-neutral-900 rounded-[3rem] p-10 md:p-20 text-white relative overflow-hidden motion-enter delay-100">
+                    <!-- Background Glow inside Mission -->
+                    <div class="absolute -top-1/2 -left-1/4 w-full h-full bg-brand-teal/20 rounded-full blur-[120px]">
+                    </div>
+
+                    <div class="max-w-3xl relative z-10">
+                        <h2 class="text-xs font-mono tracking-[0.3em] uppercase text-brand-teal mb-8">Minha Missão</h2>
+                        <h3 class="text-3xl md:text-5xl font-black mb-8 leading-tight">
+                            Desenvolvimento de lideranças como motor de transformação consciente.
+                        </h3>
+                        <p class="text-lg md:text-xl text-neutral-400 font-light leading-relaxed mb-12">
+                            Minha missão é acelerar o desenvolvimento de competências, habilidades e comportamentos para
+                            que profissionais e empresas alcancem resultados extraordinários — de forma consistente e
+                            sustentável.
+                        </p>
+
+                        <a href="#contato" class="btn-beam-wrapper group/btn">
+                            <span class="btn-beam-border"></span>
+                            <span
+                                class="btn-beam-inner px-10 py-5 bg-white text-black hover:bg-neutral-100 border-none">
+                                Levar essa transformação para minha empresa
+                                <iconify-icon icon="solar:arrow-right-up-linear"
+                                    class="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></iconify-icon>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================
+         2. FOOTER (Contato & Form)
+         ========================================= -->
+    <footer id="contato"
+        class="relative bg-zinc-50 border-t border-dashed border-black/10 pt-24 pb-12 overflow-hidden z-10">
+        <!-- Abstract Typographic Background Element -->
+        <div class="absolute inset-0 z-0 pointer-events-none opacity-[0.03]">
+            <div
+                class="text-[8rem] md:text-[12rem] font-black whitespace-nowrap leading-none tracking-tighter text-black absolute top-10 -left-10 select-none">
+                CONTATO // MENTORIA
+            </div>
+        </div>
+
+        <div
+            class="max-w-[1440px] mx-auto px-6 md:px-10 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+            <!-- Lado Esquerdo: Formulário (com validação básica e efeitos de focus) -->
+            <div class="flex flex-col motion-enter delay-100">
+                <div class="mb-10 text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-black mb-3">Vamos conversar?</h2>
+                    <p class="text-neutral-500 text-sm md:text-base max-w-sm">Preencha o formulário abaixo para discutir
+                        sobre como podemos potencializar sua carreira ou equipe.</p>
+                </div>
+
+                <form id="contactForm"
+                    class="space-y-6 bg-white p-6 md:p-10 rounded-[2rem] border border-neutral-100 shadow-sm relative group w-full">
+
+                    <!-- Input: Nome (com div .input-border-bottom simulando design system outline/focus) -->
+                    <div class="input-group bg-neutral-50 rounded-xl group/input">
+                        <input type="text" id="nome" required placeholder="Nome completo"
+                            class="input-animated bg-transparent w-full text-sm">
+                        <div class="input-border-bottom"></div>
+                    </div>
+
+                    <!-- Input: Email -->
+                    <div class="input-group bg-neutral-50 rounded-xl group/input">
+                        <input type="email" id="email" required placeholder="Seu melhor e-mail"
+                            class="input-animated bg-transparent w-full text-sm">
+                        <div class="input-border-bottom"></div>
+                    </div>
+
+                    <!-- Input: Textarea -->
+                    <div class="input-group bg-neutral-50 rounded-xl group/input">
+                        <textarea id="mensagem" required rows="4"
+                            placeholder="Como posso ajudar no seu desenvolvimento?"
+                            class="input-animated bg-transparent w-full text-sm resize-none pt-4"></textarea>
+                        <div class="input-border-bottom"></div>
+                    </div>
+
+                    <!-- Submit Button: Com animação Hover e lógica de Loading Mockada -->
+                    <button type="submit" id="submitBtn" class="btn-beam-wrapper w-full mt-4 group/btn">
+                        <span class="btn-beam-border"></span>
+                        <span
+                            class="btn-beam-inner bg-brand-primary text-white hover:bg-neutral-900 w-full justify-center transition-all duration-300 gap-3">
+                            <span class="btn-text uppercase tracking-widest text-[10px] md:text-xs">Enviar
+                                Mensagem</span>
+                            <iconify-icon icon="solar:plain-bold"
+                                class="text-lg btn-icon group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform"></iconify-icon>
+                            <!-- Spinner visível apenas no estado de loading -->
+                            <iconify-icon icon="solar:spinner-bold"
+                                class="text-lg animate-spin hidden btn-loading"></iconify-icon>
+                        </span>
+                    </button>
+                    <!-- Success Message feedback (inicialmente hidden) -->
+                    <p id="successMsg"
+                        class="text-brand-teal text-xs text-center font-mono font-bold mt-4 opacity-0 transition-opacity duration-300">
+                        Mensagem enviada com sucesso!</p>
+                </form>
+            </div>
+
+            <!-- Lado Direito: Contatos e Imagem Decorativa (Xícara) -->
+            <div
+                class="flex flex-col motion-enter delay-300 h-full relative lg:items-start lg:pl-10 text-center lg:text-left mt-10 lg:mt-0">
+
+                <h3 class="font-mono text-[10px] uppercase tracking-[0.3em] text-brand-teal mb-3">Entre em contato</h3>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tighter text-black mb-10">Rachel Amancio</h2>
+
+                <!-- Links de contato -->
+                <div class="space-y-6 mb-12 flex flex-col items-center lg:items-start w-full">
+                    <a href="#"
+                        class="flex items-center gap-4 text-neutral-600 hover:text-black transition-colors group">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white shadow-sm border border-neutral-100 flex items-center justify-center group-hover:bg-brand-teal group-hover:text-white group-hover:border-brand-teal transition-all">
+                            <iconify-icon icon="solar:phone-bold" class="text-lg"></iconify-icon>
+                        </div>
+                        <span class="font-mono text-sm tracking-tight">+55 (11) 99999-9999</span>
+                    </a>
+                    <a href="mailto:contato@rachelamancio.com.br"
+                        class="flex items-center gap-4 text-neutral-600 hover:text-black transition-colors group">
+                        <div
+                            class="w-10 h-10 rounded-full bg-white shadow-sm border border-neutral-100 flex items-center justify-center group-hover:bg-brand-purple group-hover:text-white group-hover:border-brand-purple transition-all">
+                            <iconify-icon icon="solar:letter-bold" class="text-lg"></iconify-icon>
+                        </div>
+                        <span class="text-sm">contato@rachelamancio.com.br</span>
+                    </a>
+                </div>
+
+                <!-- Redes Sociais com SVG Iconify originais -->
+                <div class="flex items-center justify-center lg:justify-start gap-4 mb-16 lg:mb-10">
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-white shadow-sm border border-neutral-100 flex items-center justify-center text-neutral-500 hover:text-white hover:bg-[#25D366] hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <iconify-icon icon="ic:baseline-whatsapp" class="text-2xl"></iconify-icon>
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-white shadow-sm border border-neutral-100 flex items-center justify-center text-neutral-500 hover:text-white hover:bg-[#0A66C2] hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <iconify-icon icon="mdi:linkedin" class="text-2xl"></iconify-icon>
+                    </a>
+                    <a href="#"
+                        class="w-12 h-12 rounded-full bg-white shadow-sm border border-neutral-100 flex items-center justify-center text-neutral-500 hover:text-white hover:bg-[#E1306C] hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                        <iconify-icon icon="mdi:instagram" class="text-2xl"></iconify-icon>
+                    </a>
+                </div>
+
+                <!-- Imagem Decorativa com Parallax (Composição visual elegante) -->
+                <!-- No lg, a imagem flutua à direita sobrepondo a margem. No mobile, ela fica centralizada -->
+                <div
+                    class="relative w-48 h-48 sm:w-64 sm:h-64 mx-auto lg:absolute lg:-right-4 lg:-bottom-20 animate-float">
+
+                    <!-- Glow de fundo na Imagem (Brand Identity) -->
+                    <div class="absolute inset-0 bg-brand-teal rounded-full blur-[40px] opacity-30"></div>
+
+                    <!-- Imagem Premium Xícara/Café simulando identidade visual com fundo escuro -->
+                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=80"
+                        alt="Xícara Decorativa Identidade"
+                        class="relative z-10 w-full h-full object-cover rounded-full shadow-2xl border-4 border-white">
+
+                    <!-- Badge Microinterativo sobreposto à imagem -->
+                    <div
+                        class="absolute -bottom-2 -left-4 sm:left-auto sm:-right-4 bg-white px-4 py-2 sm:py-3 rounded-full text-[10px] uppercase font-mono shadow-xl border border-neutral-100 z-20 flex items-center gap-2">
+                        <iconify-icon icon="solar:star-fall-minimalistic-bold-duotone"
+                            class="text-brand-purple text-lg"></iconify-icon>
+                        <span class="tracking-widest font-bold">Mentalidade 360</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full text-center mt-20 pt-8 border-t border-black/5 motion-enter delay-500">
+            <p class="text-[10px] font-mono text-neutral-400 uppercase tracking-widest">&copy; 2026 Rachel Amancio.
+                Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts: Microinterações e Formulário -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Intersection Observer (Fade/Slide in on Scroll)
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.motion-enter, .hero-text-mask').forEach((el) => {
+                observer.observe(el);
+            });
+
+            setTimeout(() => {
+                document.querySelectorAll('.hero-text-mask').forEach(el => el.classList.add('active'));
+                document.querySelectorAll('.motion-enter').forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight) {
+                        el.classList.add('active');
+                    }
+                });
+            }, 100);
+
+            // 2. Efeito Flashlight / Cursor Glow para o Card do Hero
+            const glowCards = document.querySelectorAll('.glow-card');
+            glowCards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${(x / rect.width) * 100}%`);
+                    card.style.setProperty('--mouse-y', `${(y / rect.height) * 100}%`);
+                });
+            });
+
+            // 3. Efeito de Parallax Simples Dinâmico
+            const parallaxElements = document.querySelectorAll('.animate-float-simple');
+            window.addEventListener('scroll', () => {
+                parallaxElements.forEach(el => {
+                    const scrollVal = window.scrollY;
+                    el.style.transform = `translateY(${scrollVal * -0.15}px)`;
+                });
+            });
+
+            // 4. Lógica de Validação e Loading do Formulário de Contato
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+
+                    const btn = document.getElementById('submitBtn');
+                    const btnText = btn.querySelector('.btn-text');
+                    const btnIcon = btn.querySelector('.btn-icon');
+                    const btnLoading = btn.querySelector('.btn-loading');
+                    const successMsg = document.getElementById('successMsg');
+
+                    // Estado de Loading (Feedback Imediato)
+                    btnText.textContent = "ENVIANDO...";
+                    btnIcon.classList.add('hidden');
+                    btnLoading.classList.remove('hidden');
+                    btn.classList.add('opacity-80');
+                    btn.style.pointerEvents = 'none'; // Previne duplo clique
+                    successMsg.style.opacity = '0';
+
+                    // Mockando o disparo da API (1.5 segundos)
+                    setTimeout(() => {
+                        // Estado de Sucesso
+                        btnText.textContent = "MENSAGEM ENVIADA";
+                        btnLoading.classList.add('hidden');
+                        btnIcon.classList.remove('hidden');
+                        btnIcon.setAttribute('icon', 'solar:check-circle-bold');
+                        btnIcon.classList.add('text-brand-teal');
+                        btn.classList.remove('opacity-80');
+                        successMsg.style.opacity = '1';
+
+                        // Reseta o estado original após 4 segundos para nova interação
+                        setTimeout(() => {
+                            btnText.textContent = "ENVIAR MENSAGEM";
+                            btnIcon.setAttribute('icon', 'solar:plain-bold');
+                            btnIcon.classList.remove('text-brand-teal');
+                            btn.style.pointerEvents = 'auto';
+                            successMsg.style.opacity = '0';
+                            contactForm.reset();
+                        }, 4000);
+
+                    }, 1500); // 1.5s delay falso
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
